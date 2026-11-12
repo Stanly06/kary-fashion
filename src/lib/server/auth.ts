@@ -87,4 +87,4 @@ export async function requireAdmin(): Promise<CurrentUser> {
   return user;
 }
 
-export const ROLE_LABEL: Record<Role, string> = { owner: "Dueña", admin: "Administradora", employee: "Empleada" };
+export const ROLE_LABEL: Record<Role, string> = { owner: "Dueña", admin: "Administrador", employee: "Empleada" };

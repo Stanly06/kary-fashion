@@ -44,7 +44,7 @@ export default async function SettingsPage() {
       <Panel title="Usuarios y permisos">
         <p className="mb-4 text-sm text-muted">
           Cada persona entra con su propio correo. Cuando alguien crea su cuenta aparece aquí sin acceso al panel, y la dueña le asigna el rol.
-          <b className="text-ink"> Dueña:</b> todo. <b className="text-ink">Administradora:</b> todo menos usuarios y configuración.
+          <b className="text-ink"> Dueña:</b> todo. <b className="text-ink">Administrador:</b> todo menos usuarios y configuración.
           <b className="text-ink"> Empleada:</b> vende y atiende pedidos, sin ver costos ni ganancias.
         </p>
         <TableWrap><table className="table-base">

@@ -54,7 +54,7 @@ Decisiones clave:
 
 ## Roles y permisos
 
-| Acción | Dueña | Administradora | Empleada | Clienta | Visitante |
+| Acción | Dueña | Administrador | Empleada | Clienta | Visitante |
 |---|:-:|:-:|:-:|:-:|:-:|
 | Ver catálogo publicado | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Vender, crear pedidos, cobrar abonos | ✔ | ✔ | ✔ | – | – |

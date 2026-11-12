@@ -70,7 +70,7 @@ export function UserRoleForm({ id, role, active, isSelf }: { id: string; role: s
     <form action={action} className="flex flex-wrap items-center gap-2">
       <input type="hidden" name="user_id" value={id} />
       <select name="role" defaultValue={role} disabled={isSelf} aria-label="Rol" className="input w-auto py-1.5">
-        <option value="owner">Dueña</option><option value="admin">Administradora</option>
+        <option value="owner">Dueña</option><option value="admin">Administrador</option>
         <option value="employee">Empleada</option><option value="customer">Sin acceso al panel</option>
       </select>
       <label className="flex items-center gap-1 text-xs text-muted">
