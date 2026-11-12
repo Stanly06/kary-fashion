@@ -30,7 +30,7 @@ export default async function StoreHome() {
             {!info.open && <p className="mt-4 rounded-xl bg-warning-soft px-4 py-2 text-sm text-[#8a5410]">Por ahora no estamos recibiendo pedidos en línea. Escríbenos por WhatsApp.</p>}
           </div>
           <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[2rem] shadow-[var(--shadow-pop)]">
-            <Image src="/brand/hero-karina.jpg" alt="Karina, dueña de Kary Fashion, en la boutique" fill priority sizes="(max-width: 768px) 90vw, 384px" className="object-cover object-top" />
+            <Image src="/brand/hero-karina-satin.jpg" alt="Karina, dueña de Kary Fashion, con vestido satinado" fill priority sizes="(max-width: 768px) 90vw, 384px" className="object-cover object-top" />
           </div>
         </div>
       </section>
