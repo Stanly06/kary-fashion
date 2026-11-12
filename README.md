@@ -122,10 +122,17 @@ La función SQL `income_statement()` devuelve exactamente los campos de `IncomeS
 3. ✅ **Operaciones**: productos, inventario, compras, clientes, pedidos y ventas con transacciones atómicas.
 4. ✅ **Finanzas**: caja, gastos, rentabilidad, facturación (NCF/e-CF solo con autorización de la DGII) y reportes Excel/CSV/PDF.
 5. ✅ **Tienda online**: catálogo, carrito, pedido con transferencia, seguimiento y fotos mejoradas (pasarela de pago más adelante).
-6. **Pruebas y despliegue**: pruebas end-to-end, respaldos, dominio y puesta en producción.
+6. 🟡 **Despliegue**: publicada en https://kary-fashion.vercel.app (Vercel + Supabase). Pendiente: dominio propio y respaldos diarios (plan pago de Supabase).
 
 ## Publicación, datos y seguridad (resumen)
 
 - **GitHub Pages no sirve** para esta aplicación: solo publica páginas estáticas, sin servidor ni base de datos, y no puede guardar ventas ni controlar usuarios.
 - Opción recomendada para empezar: **Vercel** (aplicación) + **Supabase** (PostgreSQL, inicio de sesión, fotos y respaldos). Ambos tienen plan gratuito suficiente para una tienda pequeña; para producción conviene el plan pago de Supabase (~US$25/mes), que incluye respaldos diarios y evita que el proyecto se pause por inactividad.
-- Acceso: cada administradora tiene su propio usuario y contraseña; los roles (administradora, empleada) se validan **en el servidor** y en la base de datos, no solo en la pantalla.
+- Acceso: cada administrador o administradora tiene su propio usuario y contraseña; los roles (administradora, empleada) se validan **en el servidor** y en la base de datos, no solo en la pantalla.
+
+## Cómo se publica
+
+- Cada cambio que se sube a la rama `main` de este repositorio se publica solo en Vercel en uno o dos minutos.
+- Las claves (conexión a la base de datos, Supabase) están guardadas en Vercel → *Settings → Environment Variables*; **nunca** van en el código ni en este repositorio.
+- Los cambios de base de datos van como archivos nuevos en `supabase/migrations/` y se aplican en Supabase antes de publicar el código que los usa.
+- Las cuentas del personal se crean en Supabase (*Authentication → Users*) y la dueña les da el rol en *Configuración → Usuarios*. El registro público está desactivado.
