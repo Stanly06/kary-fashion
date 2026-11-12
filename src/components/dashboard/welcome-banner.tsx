@@ -19,7 +19,7 @@ export function WelcomeBanner({ photoSrc, isDemo }: { photoSrc?: string; isDemo:
       {photoSrc && (
         <Image
           src={photoSrc}
-          alt="Modelo con vestido satinado y bolsas de compras"
+          alt="Karina, dueña de Kary Fashion"
           width={600}
           height={470}
           priority
