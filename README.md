@@ -135,4 +135,5 @@ La función SQL `income_statement()` devuelve exactamente los campos de `IncomeS
 - Cada cambio que se sube a la rama `main` de este repositorio se publica solo en Vercel en uno o dos minutos.
 - Las claves (conexión a la base de datos, Supabase) están guardadas en Vercel → *Settings → Environment Variables*; **nunca** van en el código ni en este repositorio.
 - Los cambios de base de datos van como archivos nuevos en `supabase/migrations/` y se aplican en Supabase antes de publicar el código que los usa.
+- La **API web de Supabase (Data API) no expone el esquema `public`**: la app lee y escribe en la base directamente desde el servidor (rol `authenticated` con RLS), así que nadie puede consultar tablas ni vistas desde afuera con la clave pública. El inicio de sesión y las fotos usan sus propios servicios y no dependen de esto. Si algún día se activa de nuevo, revise primero el asesor de seguridad de Supabase.
 - Las cuentas del personal se crean en Supabase (*Authentication → Users*) y la dueña les da el rol en *Configuración → Usuarios*. El registro público está desactivado.
